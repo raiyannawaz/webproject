@@ -1,0 +1,32 @@
+html
+  head
+    style 
+        include ../static/style.css
+    title= title
+  body
+    nav 
+      div 
+        h1 Mens In Unique
+      ul 
+       li 
+        a(href="/") Home
+       li 
+        a(href="/About") About
+       li 
+        a(href="/Contact") Contact
+       li 
+        a(href="/Service") Service
+    .container
+       p= content
+       h1= head
+       form(action="/" method="POST" id="form")
+         input(type="text", name="name" id="name", placeholder="Enter Your Name")
+         input(type="number", name="age" id="age", placeholder="Enter Your Age")
+         select(name="gender", id="gender", placeholder = "Enter Your Gender")
+            option(value="Male") Male
+            option(value="Female") Female
+         textarea(name="text", cols="30", rows="6") Enter Your Concern
+         button(type="", id="btn") Submit
+    footer 
+       p Copyrights &copy; 2022 | All Rights Reserved
+    
